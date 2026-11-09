@@ -3,310 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyrus Ndirangu | Executive CV Portfolio</title>
+    <title>Cyrus Ndirangu | Operations & Logistics Portfolio</title>
     <style>
         :root {
-            --brand-primary: #0f172a;
-            --brand-accent: #2563eb;
-            --brand-success: #10b981;
-            --slate-dark: #1e293b;
-            --slate-light: #f8fafc;
-            --slate-border: #e2e8f0;
-            --text-main: #334155;
-            --text-muted: #64748b;
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+            --border: #e2e8f0;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-main);
+            color: var(--text);
             background-color: #f1f5f9;
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
         }
-
         .cv-wrapper {
-            max-width: 1050px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.05);
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 300px 1fr;
             overflow: hidden;
         }
-
-        /* SIDEBAR SECTION */
         .sidebar {
-            background-color: var(--brand-primary);
+            background-color: var(--primary);
             color: white;
-            padding: 3rem 2rem;
+            padding: 2.5rem 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 2rem;
         }
-
-        .profile-block h1 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            color: white;
-        }
-
-        .profile-block .tagline {
-            color: #60a5fa;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-top: 0.75rem;
-            line-height: 1.3;
-        }
-
+        .profile-block h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; }
+        .profile-block .tagline { color: #60a5fa; font-size: 1rem; margin-top: 0.5rem; font-weight: 600; }
         .sidebar-section h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #94a3b8;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 0.5rem;
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
+            color: #94a3b8; margin-bottom: 0.75rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem;
         }
-
-        .contact-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-list li {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-list label {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-        }
-
-        .contact-list a {
-            color: #93c5fd;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .contact-list a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .sidebar-skill-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .sidebar-skill-group h4 {
-            font-size: 0.8rem;
-            color: #cbd5e1;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .compact-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
+        .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; }
+        .contact-list li { display: flex; flex-direction: column; }
+        .contact-list label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; }
+        .contact-list a { color: #93c5fd; text-decoration: none; }
+        .sidebar-skill-group { margin-bottom: 1rem; }
+        .sidebar-skill-group h4 { font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.4rem; }
+        .compact-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
         .compact-tags span {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #e2e8f0;
-            font-weight: 500;
+            background: #1e293b; border: 1px solid #334155; padding: 0.25rem 0.5rem;
+            border-radius: 4px; font-size: 0.75rem; color: #e2e8f0;
         }
-
-        .sidebar-edu-item {
-            margin-bottom: 1.25rem;
-        }
-
-        .sidebar-edu-item .degree {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .sidebar-edu-item .institution {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-        }
-
-        .sidebar-edu-item .year {
-            font-size: 0.8rem;
-            color: #94a3b8;
-        }
-
-        /* MAIN CONTENT SECTION */
-        .main-content {
-            padding: 4rem;
-            background-color: white;
-        }
-
-        .main-section {
-            margin-bottom: 3rem;
-        }
-
+        .sidebar-edu-item { margin-bottom: 1rem; font-size: 0.85rem; }
+        .sidebar-edu-item .degree { font-weight: 600; color: white; }
+        .sidebar-edu-item .institution { color: #cbd5e1; font-size: 0.8rem; }
+        .main-content { padding: 3rem; background-color: white; }
+        .main-section { margin-bottom: 2.5rem; }
         .main-section h2 {
-            font-size: 1.35rem;
-            color: var(--brand-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 700;
-            border-bottom: 2px solid var(--slate-border);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.2rem; color: var(--primary); text-transform: uppercase;
+            letter-spacing: 0.05em; border-bottom: 2px solid var(--border);
+            padding-bottom: 0.35rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;
         }
-
         .main-section h2::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 16px;
-            background-color: var(--brand-accent);
-            border-radius: 2px;
+            content: ''; display: inline-block; width: 6px; height: 14px; background-color: var(--accent); border-radius: 2px;
         }
-
-        .executive-summary {
-            font-size: 1.05rem;
-            color: var(--text-main);
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        /* TIMELINE DISPLAY FOR WORK EXPERIENCE */
-        .timeline {
-            position: relative;
-            padding-left: 1.5rem;
-            border-left: 2px solid var(--slate-border);
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .timeline-item {
-            position: relative;
-        }
-
+        .timeline { position: relative; padding-left: 1.25rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 2rem; }
+        .timeline-item { position: relative; }
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: calc(-1.5rem - 6px);
-            top: 0.35rem;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: white;
-            border: 2px solid var(--brand-accent);
-            transition: background-color 0.2s ease;
+            content: ''; position: absolute; left: calc(-1.25rem - 5px); top: 0.4rem;
+            width: 8px; height: 8px; border-radius: 50%; background-color: white; border: 2px solid var(--accent);
         }
-
-        .timeline-item:hover::before {
-            background-color: var(--brand-accent);
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 0.5rem;
-        }
-
-        .role-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--slate-dark);
-        }
-
-        .company-name {
-            color: var(--brand-accent);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .job-date {
-            font-size: 0.85rem;
-            font-weight: 600;
-            background-color: var(--slate-light);
-            color: var(--text-muted);
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            border: 1px solid var(--slate-border);
-        }
-
-        .timeline-item ul {
-            padding-left: 1.1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-
-        .timeline-item li {
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
-
-        /* PREFERENCES CARD FOOTER */
-        .pref-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .pref-card {
-            background-color: var(--slate-light);
-            border: 1px solid var(--slate-border);
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        .pref-card strong {
-            color: var(--slate-dark);
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-
-        /* RESPONSIVE BREAKPOINTS */
+        .timeline-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem; }
+        .role-title { font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+        .company-name { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .job-date { font-size: 0.8rem; font-weight: 600; background-color: var(--light); color: var(--text-muted); padding: 0.1rem 0.5rem; border-radius: 12px; border: 1px solid var(--border); }
+        .timeline-item ul { padding-left: 1rem; margin-top: 0.25rem; }
+        .timeline-item li { font-size: 0.9rem; margin-bottom: 0.25rem; color: var(--text); }
+        .pref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .pref-card { background-color: var(--light); border: 1px solid var(--border); padding: 1rem; border-radius: 6px; font-size: 0.85rem; }
+        .pref-card strong { color: var(--dark); display: block; margin-bottom: 0.25rem; }
         @media (max-width: 850px) {
             body { padding: 0; }
             .cv-wrapper { grid-template-columns: 1fr; border-radius: 0; }
-            .sidebar { padding: 2.5rem 1.5rem; }
-            .main-content { padding: 2.5rem 1.5rem; }
-            .timeline-header { flex-direction: column; gap: 0.25rem; }
-            .job-date { align-self: flex-start; margin-top: 0.25rem; }
+            .main-content { padding: 2rem 1.5rem; }
+            .timeline-header { flex-direction: column; }
         }
-
-        /* PRINT CONFIGURATION */
         @media print {
-            body { background: white; padding: 0; font-size: 12px; }
-            .cv-wrapper { grid-template-columns: 240px 1fr; box-shadow: none; border-radius: 0; }
-            .sidebar { background: #1e293b !important; padding: 1.5rem; }
-            .main-content { padding: 2rem; }
-            .compact-tags span { background: none !important; border: 1px solid #475569 !important; color: #1e293b !important; }
-            .job-date { background: none !important; border: none; padding: 0; color: #1e293b !important; }
-            .pref-card { background: none !important; border: 1px solid #cbd5e1; }
+            body { background: white; padding: 0; }
+            .cv-wrapper { grid-template-columns: 220px 1fr; box-shadow: none; }
+            .sidebar { background: #1e293b !important; }
         }
     </style>
 </head>
@@ -323,26 +110,70 @@
             <div class="sidebar-section">
                 <h3>Contact Details</h3>
                 <ul class="contact-list">
-                    <li>
-                        <label>Location</label>
-                        <span>Nairobi, Kenya</span>
-                    </li>
-                    <li>
-                        <label>Phone</label>
-                        <span>+254-740-257-505</span>
-                    </li>
-                    <li>
-                        <label>Email</label>
-                        <span><a href="mailto:cyrusndirangu100@gmail.com">cyrusndirangu100@gmail.com</a></span>
-                    </li>
-                    <li>
-                        <label>Postal Box</label>
-                        <span>P.O. Box 489, Othaya</span>
-                    </li>
-                    <li>
-                        <label>Professional Network</label>
-                        <span><a href="https://linkedin.com" target="_blank">://linkedin.com</a></span>
-                    </li>
+                    <li><label>Location</label><span>Nairobi, Kenya</span></li>
+                    <li><label>Phone</label><span>+254-740-257-505</span></li>
+                    <li><label>Email</label><span><a href="mailto:cyrusndirangu100@gmail.com">cyrusndirangu100@gmail.com</a></span></li>
+                    <li><label>Postal Box</label><span>P.O. Box 489, Othaya</span></li>
+                    <li><label>LinkedIn</label><span><a href="https://linkedin.com" target="_blank">View Profile</a></span></li>
                 </ul>
             </div>
 
+            <div class="sidebar-section">
+                <h3>Expertise</h3>
+                <div class="sidebar-skill-group">
+                    <h4>Operations & Analytics</h4>
+                    <div class="compact-tags">
+                        <span>Data Entry</span><span>Data Annotation</span><span>Quality Control</span><span>Google Sheets</span><span>MS Excel</span>
+                    </div>
+                </div>
+                <div class="sidebar-skill-group">
+                    <h4>Logistics & Compliance</h4>
+                    <div class="compact-tags">
+                        <span>NEMT Dispatch</span><span>Route Optimization</span><span>RouteGenie</span><span>TripMaster</span><span>HIPAA</span><span>Medicaid Frameworks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Education</h3>
+                <div class="sidebar-edu-item">
+                    <div class="degree">BSc in Population Health</div>
+                    <div class="institution">Kenyatta University</div>
+                    <div class="year">2021 – 2024</div>
+                </div>
+                <div class="sidebar-edu-item">
+                    <div class="degree">KCSE (Grade B Plain)</div>
+                    <div class="institution">Witima Secondary School</div>
+                    <div class="year">2019</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <section class="main-section">
+                <h2>Professional Summary</h2>
+                <p style="text-align: justify; font-size: 0.95rem;">
+                    Detail-oriented and high-capacity Operations Professional balancing expertise across complex healthcare logistics, corporate data integrity frameworks, and cross-channel marketing tracks. Confirmed record as a multi-role operational anchor, driving business infrastructure, front-end public reception, and customer database retention paths seamlessly. Elite command over system route optimization tools, specialized compliance pipelines (HIPAA/Medicaid), and modern analytical workspace environments. Highly systematic, tech-forward, and configured securely for robust, high-volume remote freelance or full-time execution tracks.
+                </p>
+            </section>
+
+            <section class="main-section">
+                <h2>Professional Track</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="role-title">Marketing & Operations Coordinator</span>
+                            <span class="job-date">Jan 2024 – Present</span>
+                        </div>
+                        <div class="company-name" style="margin-bottom: 0.5rem;">Solid Gardens Limited — Kenya (Sole Employee)</div>
+                        <ul>
+                            <li>Served as the central administrative pillar handling front-desk interactions, client intake, and corporate communication channels.</li>
+                            <li>Designed and managed targeted social media marketing tracks, expanding public lead pipelines and digital client acquisition rates.</li>
+                            <li>Maintained structural entry updates across client data registries, tracking payment status logs and inbound service profiles.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="role-title">NEMT Dispatch Specialist</span>
