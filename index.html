@@ -3,98 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyrus Ndirangu | Operations & Logistics Portfolio</title>
+    <title>Cyrus Ndirangu | CV Portfolio</title>
     <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --text: #334155;
-            --border: #e2e8f0;
-        }
+        :root { --primary: #0f172a; --accent: #2563eb; --dark: #1e293b; --light: #f8fafc; --text: #334155; --border: #e2e8f0; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: #f1f5f9;
-            padding: 2rem 1rem;
-        }
-        .cv-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.05);
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            overflow: hidden;
-        }
-        .sidebar {
-            background-color: var(--primary);
-            color: white;
-            padding: 2.5rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        .profile-block h1 { font-size: 2rem; font-weight: 800; line-height: 1.1; }
-        .profile-block .tagline { color: #60a5fa; font-size: 1rem; margin-top: 0.5rem; font-weight: 600; }
-        .sidebar-section h3 {
-            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
-            color: #94a3b8; margin-bottom: 0.75rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem;
-        }
-        .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.5; color: var(--text); background-color: #f1f5f9; padding: 2rem 1rem; }
+        .cv-wrapper { max-width: 950px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.05); display: grid; grid-template-columns: 280px 1fr; overflow: hidden; }
+        .sidebar { background-color: var(--primary); color: white; padding: 2rem 1.25rem; display: flex; flex-direction: column; gap: 1.75rem; }
+        .profile-block h1 { font-size: 1.75rem; font-weight: 800; line-height: 1.1; }
+        .profile-block .tagline { color: #60a5fa; font-size: 0.95rem; margin-top: 0.4rem; font-weight: 600; }
+        .sidebar-section h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 0.5rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; }
+        .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; }
         .contact-list li { display: flex; flex-direction: column; }
         .contact-list label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; }
         .contact-list a { color: #93c5fd; text-decoration: none; }
-        .sidebar-skill-group { margin-bottom: 1rem; }
-        .sidebar-skill-group h4 { font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.4rem; }
-        .compact-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-        .compact-tags span {
-            background: #1e293b; border: 1px solid #334155; padding: 0.25rem 0.5rem;
-            border-radius: 4px; font-size: 0.75rem; color: #e2e8f0;
-        }
-        .sidebar-edu-item { margin-bottom: 1rem; font-size: 0.85rem; }
+        .sidebar-skill-group { margin-bottom: 0.75rem; }
+        .sidebar-skill-group h4 { font-size: 0.75rem; color: #cbd5e1; margin-bottom: 0.3rem; }
+        .compact-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+        .compact-tags span { background: #1e293b; border: 1px solid #334155; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.75rem; color: #e2e8f0; }
+        .sidebar-edu-item { margin-bottom: 0.75rem; font-size: 0.85rem; }
         .sidebar-edu-item .degree { font-weight: 600; color: white; }
         .sidebar-edu-item .institution { color: #cbd5e1; font-size: 0.8rem; }
-        .main-content { padding: 3rem; background-color: white; }
-        .main-section { margin-bottom: 2.5rem; }
-        .main-section h2 {
-            font-size: 1.2rem; color: var(--primary); text-transform: uppercase;
-            letter-spacing: 0.05em; border-bottom: 2px solid var(--border);
-            padding-bottom: 0.35rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;
-        }
-        .main-section h2::before {
-            content: ''; display: inline-block; width: 6px; height: 14px; background-color: var(--accent); border-radius: 2px;
-        }
-        .timeline { position: relative; padding-left: 1.25rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 2rem; }
+        .main-content { padding: 2.5rem; background-color: white; }
+        .main-section { margin-bottom: 2rem; }
+        .main-section h2 { font-size: 1.15rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid var(--border); padding-bottom: 0.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+        .main-section h2::before { content: ''; display: inline-block; width: 5px; height: 12px; background-color: var(--accent); border-radius: 1px; }
+        .timeline { position: relative; padding-left: 1rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 1.5rem; }
         .timeline-item { position: relative; }
-        .timeline-item::before {
-            content: ''; position: absolute; left: calc(-1.25rem - 5px); top: 0.4rem;
-            width: 8px; height: 8px; border-radius: 50%; background-color: white; border: 2px solid var(--accent);
-        }
+        .timeline-item::before { content: ''; position: absolute; left: calc(-1rem - 4px); top: 0.35rem; width: 6px; height: 6px; border-radius: 50%; background-color: white; border: 2px solid var(--accent); }
         .timeline-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem; }
-        .role-title { font-size: 1.1rem; font-weight: 700; color: var(--dark); }
-        .company-name { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
-        .job-date { font-size: 0.8rem; font-weight: 600; background-color: var(--light); color: var(--text-muted); padding: 0.1rem 0.5rem; border-radius: 12px; border: 1px solid var(--border); }
+        .role-title { font-size: 1.05rem; font-weight: 700; color: var(--dark); }
+        .company-name { color: var(--accent); font-weight: 600; font-size: 0.85rem; }
+        .job-date { font-size: 0.75rem; font-weight: 600; background-color: var(--light); color: var(--text); padding: 0.1rem 0.4rem; border-radius: 10px; border: 1px solid var(--border); }
         .timeline-item ul { padding-left: 1rem; margin-top: 0.25rem; }
-        .timeline-item li { font-size: 0.9rem; margin-bottom: 0.25rem; color: var(--text); }
-        .pref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-        .pref-card { background-color: var(--light); border: 1px solid var(--border); padding: 1rem; border-radius: 6px; font-size: 0.85rem; }
-        .pref-card strong { color: var(--dark); display: block; margin-bottom: 0.25rem; }
-        @media (max-width: 850px) {
-            body { padding: 0; }
-            .cv-wrapper { grid-template-columns: 1fr; border-radius: 0; }
-            .main-content { padding: 2rem 1.5rem; }
-            .timeline-header { flex-direction: column; }
-        }
-        @media print {
-            body { background: white; padding: 0; }
-            .cv-wrapper { grid-template-columns: 220px 1fr; box-shadow: none; }
-            .sidebar { background: #1e293b !important; }
-        }
+        .timeline-item li { font-size: 0.85rem; margin-bottom: 0.2rem; color: var(--text); }
+        .pref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .pref-card { background-color: var(--light); border: 1px solid var(--border); padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; }
+        .pref-card strong { color: var(--dark); display: block; margin-bottom: 0.15rem; }
+        @media (max-width: 768px) { body { padding: 0; } .cv-wrapper { grid-template-columns: 1fr; border-radius: 0; } .main-content { padding: 1.5rem; } .timeline-header { flex-direction: column; } .pref-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -153,7 +99,7 @@
         <main class="main-content">
             <section class="main-section">
                 <h2>Professional Summary</h2>
-                <p style="text-align: justify; font-size: 0.95rem;">
+                <p style="text-align: justify; font-size: 0.9rem;">
                     Detail-oriented and high-capacity Operations Professional balancing expertise across complex healthcare logistics, corporate data integrity frameworks, and cross-channel marketing tracks. Confirmed record as a multi-role operational anchor, driving business infrastructure, front-end public reception, and customer database retention paths seamlessly. Elite command over system route optimization tools, specialized compliance pipelines (HIPAA/Medicaid), and modern analytical workspace environments. Highly systematic, tech-forward, and configured securely for robust, high-volume remote freelance or full-time execution tracks.
                 </p>
             </section>
@@ -166,7 +112,7 @@
                             <span class="role-title">Marketing & Operations Coordinator</span>
                             <span class="job-date">Jan 2024 – Present</span>
                         </div>
-                        <div class="company-name" style="margin-bottom: 0.5rem;">Solid Gardens Limited — Kenya (Sole Employee)</div>
+                        <div class="company-name" style="margin-bottom: 0.25rem;">Solid Gardens Limited — Kenya (Sole Employee)</div>
                         <ul>
                             <li>Served as the central administrative pillar handling front-desk interactions, client intake, and corporate communication channels.</li>
                             <li>Designed and managed targeted social media marketing tracks, expanding public lead pipelines and digital client acquisition rates.</li>
@@ -177,3 +123,11 @@
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role-title">NEMT Dispatch Specialist</span>
+                            <span class="job-date">Prior Experience</span>
+                        </div>
+                        <div class="company-name" style="margin-bottom: 0.25rem;">Healthcare Transportation Frameworks</div>
+                        <ul>
+                            <li>Governed 50+ urgent medical transports daily, supervising complex ambulatory, wheelchair, and advanced stretcher vehicle dispatches.</li>
+                            <li>Executed continuous itinerary adjustments covering dynamic same-day scheduling additions, unexpected cancellation metrics, and on-route vehicular emergencies.</li>
+                            <li>Protected healthcare platform records using strict HIPAA data compliance and validation loops.</li>
+                        </ul>
