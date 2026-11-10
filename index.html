@@ -1,133 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyrus Ndirangu | CV Portfolio</title>
+    <title>Cyrus Kabiro Ndirangu - Professional Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',    // Dark slate grey
+                        secondary: '#2563eb',  // Accent blue
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root { --primary: #0f172a; --accent: #2563eb; --dark: #1e293b; --light: #f8fafc; --text: #334155; --border: #e2e8f0; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.5; color: var(--text); background-color: #f1f5f9; padding: 2rem 1rem; }
-        .cv-wrapper { max-width: 950px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.05); display: grid; grid-template-columns: 280px 1fr; overflow: hidden; }
-        .sidebar { background-color: var(--primary); color: white; padding: 2rem 1.25rem; display: flex; flex-direction: column; gap: 1.75rem; }
-        .profile-block h1 { font-size: 1.75rem; font-weight: 800; line-height: 1.1; }
-        .profile-block .tagline { color: #60a5fa; font-size: 0.95rem; margin-top: 0.4rem; font-weight: 600; }
-        .sidebar-section h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 0.5rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; }
-        .contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; }
-        .contact-list li { display: flex; flex-direction: column; }
-        .contact-list label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; }
-        .contact-list a { color: #93c5fd; text-decoration: none; }
-        .sidebar-skill-group { margin-bottom: 0.75rem; }
-        .sidebar-skill-group h4 { font-size: 0.75rem; color: #cbd5e1; margin-bottom: 0.3rem; }
-        .compact-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-        .compact-tags span { background: #1e293b; border: 1px solid #334155; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.75rem; color: #e2e8f0; }
-        .sidebar-edu-item { margin-bottom: 0.75rem; font-size: 0.85rem; }
-        .sidebar-edu-item .degree { font-weight: 600; color: white; }
-        .sidebar-edu-item .institution { color: #cbd5e1; font-size: 0.8rem; }
-        .main-content { padding: 2.5rem; background-color: white; }
-        .main-section { margin-bottom: 2rem; }
-        .main-section h2 { font-size: 1.15rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid var(--border); padding-bottom: 0.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
-        .main-section h2::before { content: ''; display: inline-block; width: 5px; height: 12px; background-color: var(--accent); border-radius: 1px; }
-        .timeline { position: relative; padding-left: 1rem; border-left: 2px solid var(--border); display: flex; flex-direction: column; gap: 1.5rem; }
-        .timeline-item { position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: calc(-1rem - 4px); top: 0.35rem; width: 6px; height: 6px; border-radius: 50%; background-color: white; border: 2px solid var(--accent); }
-        .timeline-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.25rem; }
-        .role-title { font-size: 1.05rem; font-weight: 700; color: var(--dark); }
-        .company-name { color: var(--accent); font-weight: 600; font-size: 0.85rem; }
-        .job-date { font-size: 0.75rem; font-weight: 600; background-color: var(--light); color: var(--text); padding: 0.1rem 0.4rem; border-radius: 10px; border: 1px solid var(--border); }
-        .timeline-item ul { padding-left: 1rem; margin-top: 0.25rem; }
-        .timeline-item li { font-size: 0.85rem; margin-bottom: 0.2rem; color: var(--text); }
-        .pref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-        .pref-card { background-color: var(--light); border: 1px solid var(--border); padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; }
-        .pref-card strong { color: var(--dark); display: block; margin-bottom: 0.15rem; }
-        @media (max-width: 768px) { body { padding: 0; } .cv-wrapper { grid-template-columns: 1fr; border-radius: 0; } .main-content { padding: 1.5rem; } .timeline-header { flex-direction: column; } .pref-grid { grid-template-columns: 1fr; } }
+        @media print {
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+            .print-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 1rem !important;
+                max-width: 100% !important;
+            }
+            .skill-tag {
+                border: 1px solid #cbd5e1 !important;
+                background: none !important;
+            }
+        }
     </style>
 </head>
-<body>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen py-6 px-2 sm:px-6 lg:px-8">
 
-    <div class="cv-wrapper">
-        <!-- LEFT SIDEBAR -->
-        <aside class="sidebar">
-            <div class="profile-block">
-                <h1>Cyrus Ndirangu</h1>
-                <div class="tagline">Operations, Logistics & Data Management</div>
+    <!-- Floating Action Toolbar for GitHub / Print / Download -->
+    <div class="max-w-5xl mx-auto mb-6 flex justify-between items-center no-print px-2">
+        <div class="text-sm font-medium text-slate-600">
+            <i class="fa-solid fa-file-lines text-primary mr-1"></i> Interactive Resume (GitHub Ready)
+        </div>
+        <div class="flex gap-2">
+            <button onclick="window.print()" class="bg-primary hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium shadow transition flex items-center gap-2">
+                <i class="fa-solid fa-print"></i> Print / Save PDF
+            </button>
+            <a href="mailto:cyrusndirangu100@gmail.com" class="bg-secondary hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium shadow transition flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Resume Container -->
+    <main class="max-w-5xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden print-container border border-slate-200">
+        
+        <!-- Header Banner -->
+        <header class="bg-gradient-to-r from-primary to-slate-800 text-white py-8 px-6 sm:px-10 text-center">
+            <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+                Cyrus Kabiro Ndirangu
+            </h1>
+            <p class="text-xs sm:text-sm md:text-base font-semibold tracking-widest text-blue-300 uppercase mb-4">
+                NEMT Dispatch Specialist
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-200">
+                <a href="tel:+254740257505" class="hover:text-blue-300 transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-blue-400"></i> 0740257505
+                </a>
+                <a href="mailto:cyrusndirangu100@gmail.com" class="hover:text-blue-300 transition flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-blue-400"></i> cyrusndirangu100@gmail.com
+                </a>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-blue-400"></i> Nairobi, Kenya
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-blue-400"></i> Open to Remote Work
+                </span>
             </div>
+        </header>
 
-            <div class="sidebar-section">
-                <h3>Contact Details</h3>
-                <ul class="contact-list">
-                    <li><label>Location</label><span>Nairobi, Kenya</span></li>
-                    <li><label>Phone</label><span>+254-740-257-505</span></li>
-                    <li><label>Email</label><span><a href="mailto:cyrusndirangu100@gmail.com">cyrusndirangu100@gmail.com</a></span></li>
-                    <li><label>Postal Box</label><span>P.O. Box 489, Othaya</span></li>
-                    <li><label>LinkedIn</label><span><a href="https://linkedin.com" target="_blank">View Profile</a></span></li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Expertise</h3>
-                <div class="sidebar-skill-group">
-                    <h4>Operations & Analytics</h4>
-                    <div class="compact-tags">
-                        <span>Data Entry</span><span>Data Annotation</span><span>Quality Control</span><span>Google Sheets</span><span>MS Excel</span>
+        <!-- Content Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- LEFT COLUMN (Width: 4/12 on lg) -->
+            <aside class="lg:col-span-4 bg-slate-50 border-r border-slate-200 p-6 sm:p-8 space-y-6">
+                
+                <!-- CORE OPERATIONS SKILLS -->
+                <section>
+                    <h2 class="text-sm font-bold text-white bg-primary py-2 px-3 rounded-md uppercase tracking-wider mb-4 shadow-sm">
+                        Core Operations
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">NEMT Dispatch</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Trip Scheduling</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Real-Time Dispatch</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Route Optimization</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Multi-Load Coordination</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Will-Call Management</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Driver Management</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">No-Show Documentation</span>
                     </div>
-                </div>
-                <div class="sidebar-skill-group">
-                    <h4>Logistics & Compliance</h4>
-                    <div class="compact-tags">
-                        <span>NEMT Dispatch</span><span>Route Optimization</span><span>RouteGenie</span><span>TripMaster</span><span>HIPAA</span><span>Medicaid Frameworks</span>
+                </section>
+
+                <!-- SOFTWARE & COMPLIANCE -->
+                <section>
+                    <h2 class="text-sm font-bold text-white bg-primary py-2 px-3 rounded-md uppercase tracking-wider mb-4 shadow-sm">
+                        Software & Compliance
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">RouteGenie</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">TripMaster</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Bambi</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Google Maps</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">GPS Tracking</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">HIPAA Compliance</span>
+                        <span class="skill-tag bg-white border border-slate-200 px-2.5 py-1 rounded text-xs sm:text-sm font-medium text-slate-700">Medicaid Regulations</span>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="sidebar-section">
-                <h3>Education</h3>
-                <div class="sidebar-edu-item">
-                    <div class="degree">BSc in Population Health</div>
-                    <div class="institution">Kenyatta University</div>
-                    <div class="year">2021 – 2024</div>
-                </div>
-                <div class="sidebar-edu-item">
-                    <div class="degree">KCSE (Grade B Plain)</div>
-                    <div class="institution">Witima Secondary School</div>
-                    <div class="year">2019</div>
-                </div>
-            </div>
-        </aside>
+            </aside>
 
-        <!-- MAIN CONTENT -->
-        <main class="main-content">
-            <section class="main-section">
-                <h2>Professional Summary</h2>
-                <p style="text-align: justify; font-size: 0.9rem;">
-                    Detail-oriented and high-capacity Operations Professional balancing expertise across complex healthcare logistics, corporate data integrity frameworks, and cross-channel marketing tracks. Confirmed record as a multi-role operational anchor, driving business infrastructure, front-end public reception, and customer database retention paths seamlessly. Elite command over system route optimization tools, specialized compliance pipelines (HIPAA/Medicaid), and modern analytical workspace environments. Highly systematic, tech-forward, and configured securely for robust, high-volume remote freelance or full-time execution tracks.
-                </p>
-            </section>
+            <!-- RIGHT COLUMN (Width: 8/12 on lg) -->
+            <div class="lg:col-span-8 p-6 sm:p-8 space-y-6">
+                
+                <!-- PROFESSIONAL SUMMARY -->
+                <section>
+                    <h2 class="text-sm font-bold text-primary uppercase tracking-wider border-b-2 border-slate-200 pb-2 mb-3">
+                        <i class="fa-solid fa-user mr-2 text-secondary"></i> Professional Summary
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify">
+                        Detail-oriented Non-Emergency Medical Transportation (NEMT) Dispatch Specialist trained in scheduling, real-time dispatch, route optimization, and multi-load coordination. Proficient in specialized industry software including RouteGenie, TripMaster, and Bambi. Possesses a strong understanding of Medicaid NEMT regulations, HIPAA compliance guidelines, and broker portal operations, with a proven track record managing over 50 daily trips across ambulatory, wheelchair, and stretcher service levels.
+                    </p>
+                </section>
 
-            <section class="main-section">
-                <h2>Professional Track</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="role-title">Marketing & Operations Coordinator</span>
-                            <span class="job-date">Jan 2024 – Present</span>
-                        </div>
-                        <div class="company-name" style="margin-bottom: 0.25rem;">Solid Gardens Limited — Kenya (Sole Employee)</div>
-                        <ul>
-                            <li>Served as the central administrative pillar handling front-desk interactions, client intake, and corporate communication channels.</li>
-                            <li>Designed and managed targeted social media marketing tracks, expanding public lead pipelines and digital client acquisition rates.</li>
-                            <li>Maintained structural entry updates across client data registries, tracking payment status logs and inbound service profiles.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <span class="role-title">NEMT Dispatch Specialist</span>
-                            <span class="job-date">Prior Experience</span>
-                        </div>
-                        <div class="company-name" style="margin-bottom: 0.25rem;">Healthcare Transportation Frameworks</div>
-                        <ul>
-                            <li>Governed 50+ urgent medical transports daily, supervising complex ambulatory, wheelchair, and advanced stretcher vehicle dispatches.</li>
-                            <li>Executed continuous itinerary adjustments covering dynamic same-day scheduling additions, unexpected cancellation metrics, and on-route vehicular emergencies.</li>
-                            <li>Protected healthcare platform records using strict HIPAA data compliance and validation loops.</li>
-                        </ul>
+                <!-- WORK EXPERIENCE -->
+                <section>
+                    <h2 class="text-sm font-bold text-primary uppercase tracking-wider border-b-2 border-slate-200 pb-2 mb-4">
+                        <i class="fa-solid fa-briefcase mr-2 text-secondary"></i> Professional Experience
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-secondary pl-4 py-1">
+                            <div class="flex flex-wrap justify-between items-baseline mb-1">
+                                <h3 class="text-sm sm:text-base font-bold text-slate-800">NEMT Dispatch Specialist</h3>
+                                <span class="bg-blue-100 text-secondary text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Present</span>
+                            </div>
