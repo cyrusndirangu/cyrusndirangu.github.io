@@ -1,668 +1,1579 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional CV of Cyrus Kabiro Ndirangu - Operations, Logistics and NEMT Dispatch Specialist.">
-<title>Cyrus Kabiro Ndirangu | Professional CV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cyrus Kabiro Ndirangu">
+    <meta name="description" content="Professional CV of Cyrus Kabiro Ndirangu, a Population Health graduate with experience in healthcare operations, NEMT dispatch, remote data entry, marketing, logistics coordination and administration.">
+    <meta name="keywords" content="Cyrus Kabiro Ndirangu, Population Health, Public Health, NEMT Dispatch, Data Entry, Data Annotation, Healthcare Administration, Operations Coordination, Kenya">
+    <title>Cyrus Kabiro Ndirangu | Professional CV</title>
 
-<style>
-:root {
-    --navy: #0f172a;
-    --blue: #2563eb;
-    --light: #f1f5f9;
-    --text: #334155;
-    --muted: #64748b;
-    --border: #e2e8f0;
-}
+    <style>
+        /* =========================================
+           GLOBAL STYLES
+        ========================================= */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        :root {
+            --navy: #102b4e;
+            --navy-light: #1c416b;
+            --blue: #2f6f9f;
+            --accent: #4d91c6;
+            --light-blue: #eaf2f8;
+            --text: #293746;
+            --muted: #687789;
+            --white: #ffffff;
+            --border: #dce4eb;
+            --background: #f1f4f8;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 30px 15px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.toolbar {
-    max-width: 1000px;
-    margin: 0 auto 15px;
-    display: flex;
-    justify-content: flex-end;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-button {
-    background: var(--navy);
-    color: white;
-    border: none;
-    padding: 11px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.65;
+            padding: 35px 15px;
+        }
 
-button:hover {
-    background: var(--blue);
-}
+        .cv-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.cv {
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    box-shadow: 0 10px 35px #00000012;
-    border-radius: 10px;
-    overflow: hidden;
-}
+        /* =========================================
+           ACTION BUTTONS
+        ========================================= */
 
-/* SIDEBAR */
+        .action-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
 
-.sidebar {
-    background: var(--navy);
-    color: white;
-    padding: 32px 25px;
-}
+        .action-button {
+            border: none;
+            background: var(--navy);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
 
-.name {
-    font-size: 27px;
-    line-height: 1.2;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
+        .action-button:hover {
+            background: var(--blue);
+        }
 
-.tagline {
-    color: #93c5fd;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
+        /* =========================================
+           CV CONTAINER
+        ========================================= */
 
-.sidebar-section {
-    margin-top: 27px;
-}
+        .cv-container {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            background: var(--white);
+            min-height: 1000px;
+            box-shadow: 0 8px 35px rgba(16, 43, 78, 0.12);
+            border-radius: 6px;
+            overflow: hidden;
+        }
 
-.sidebar-section h2 {
-    color: #93c5fd;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 8px;
-    margin-bottom: 13px;
-}
+        /* =========================================
+           LEFT SIDEBAR
+        ========================================= */
 
-.contact-item {
-    margin-bottom: 12px;
-    font-size: 13px;
-    overflow-wrap: anywhere;
-}
+        .sidebar {
+            background: var(--navy);
+            color: var(--white);
+            padding: 38px 27px;
+        }
 
-.contact-item label {
-    display: block;
-    color: #94a3b8;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        .profile-header {
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 27px;
+        }
 
-.sidebar a {
-    color: #bfdbfe;
-    text-decoration: none;
-}
+        .profile-header h1 {
+            font-size: 28px;
+            font-weight: 750;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 13px;
+        }
 
-.skill-group {
-    margin-bottom: 16px;
-}
+        .profile-header .professional-title {
+            color: #a9cce9;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.skill-group h3 {
-    font-size: 12px;
-    color: #cbd5e1;
-    margin-bottom: 8px;
-}
+        .sidebar-section {
+            margin-bottom: 29px;
+        }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
+        .sidebar-heading {
+            color: #a9cce9;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
 
-.tags span {
-    background: #1e293b;
-    border: 1px solid #334155;
-    color: #e2e8f0;
-    font-size: 11px;
-    padding: 4px 7px;
-    border-radius: 4px;
-}
+        .contact-item {
+            margin-bottom: 13px;
+            overflow-wrap: anywhere;
+        }
 
-.education-item {
-    margin-bottom: 15px;
-    font-size: 13px;
-}
+        .contact-label {
+            display: block;
+            color: #a9cce9;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
 
-.education-item strong {
-    display: block;
-    color: white;
-}
+        .contact-value {
+            display: block;
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 1.6;
+        }
 
-.education-item small {
-    color: #cbd5e1;
-}
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+        }
 
-/* MAIN CONTENT */
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
 
-.main {
-    padding: 38px 35px;
-}
+        .sidebar-list {
+            list-style: none;
+        }
 
-.section {
-    margin-bottom: 27px;
-}
+        .sidebar-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+            color: #e5edf5;
+            font-size: 12px;
+            line-height: 1.5;
+        }
 
-.section h2 {
-    color: var(--navy);
-    text-transform: uppercase;
-    font-size: 15px;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 8px;
-    margin-bottom: 14px;
-}
+        .sidebar-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: #7db6e4;
+            font-size: 7px;
+        }
 
-.section h2::before {
-    content: "";
-    display: inline-block;
-    width: 5px;
-    height: 15px;
-    background: var(--blue);
-    margin-right: 9px;
-}
+        .skill-group {
+            margin-bottom: 17px;
+        }
 
-.summary {
-    font-size: 13px;
-    text-align: justify;
-}
+        .skill-group h4 {
+            color: #a9cce9;
+            font-size: 11px;
+            margin-bottom: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
 
-.job {
-    border-left: 2px solid var(--blue);
-    padding-left: 17px;
-    margin-bottom: 23px;
-}
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
 
-.job-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5px;
-}
+        .skill-tag {
+            background: rgba(255,255,255,0.11);
+            border: 1px solid rgba(255,255,255,0.17);
+            padding: 5px 8px;
+            border-radius: 3px;
+            font-size: 10px;
+            color: #f0f6fc;
+            line-height: 1.4;
+        }
 
-.job h3 {
-    font-size: 15px;
-    color: var(--navy);
-}
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
 
-.date {
-    font-size: 11px;
-    background: #eff6ff;
-    color: var(--blue);
-    padding: 3px 9px;
-    border-radius: 15px;
-    font-weight: bold;
-}
+        .main-content {
+            padding: 42px 39px;
+        }
 
-.company {
-    font-size: 12px;
-    color: var(--blue);
-    font-weight: bold;
-    margin: 3px 0 8px;
-}
+        .section {
+            margin-bottom: 32px;
+        }
 
-.job ul {
-    padding-left: 18px;
-}
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 17px;
+            color: var(--navy);
+            font-size: 17px;
+            font-weight: 750;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
 
-.job li {
-    font-size: 12px;
-    margin-bottom: 6px;
-}
+        .section-heading::after {
+            content: "";
+            height: 2px;
+            background: var(--border);
+            flex: 1;
+        }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
+        .section-icon {
+            width: 29px;
+            height: 29px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-blue);
+            border-radius: 4px;
+            color: var(--blue);
+            font-size: 15px;
+            flex-shrink: 0;
+        }
 
-.info-card {
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px;
-    font-size: 12px;
-}
+        .professional-summary {
+            color: #465566;
+            font-size: 13px;
+            line-height: 1.85;
+            text-align: justify;
+        }
 
-.info-card strong {
-    display: block;
-    color: var(--navy);
-    margin-bottom: 4px;
-}
+        /* =========================================
+           EXPERIENCE
+        ========================================= */
 
-.footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 10px;
-    margin-top: 25px;
-}
+        .experience-item {
+            position: relative;
+            padding-left: 19px;
+            margin-bottom: 25px;
+            border-left: 2px solid var(--border);
+        }
 
-/* MOBILE */
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 2px solid white;
+        }
 
-@media(max-width: 750px) {
-    body {
-        padding: 0;
-    }
+        .job-header {
+            margin-bottom: 9px;
+        }
 
-    .toolbar {
-        padding: 12px;
-        margin: 0;
-    }
+        .job-title {
+            color: var(--navy);
+            font-size: 15px;
+            font-weight: 750;
+            line-height: 1.5;
+        }
 
-    .cv {
-        grid-template-columns: 1fr;
-        border-radius: 0;
-    }
+        .company-name {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 650;
+            margin-top: 2px;
+        }
 
-    .sidebar {
-        padding: 28px 23px;
-    }
+        .job-date {
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 3px;
+        }
 
-    .main {
-        padding: 28px 23px;
-    }
+        .job-description {
+            color: #526171;
+            font-size: 12px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
+        .job-responsibilities {
+            padding-left: 17px;
+        }
 
-    .job-header {
-        flex-direction: column;
-    }
-}
+        .job-responsibilities li {
+            padding-left: 3px;
+            margin-bottom: 6px;
+            color: #465566;
+            font-size: 12px;
+            line-height: 1.65;
+        }
 
-/* PRINT / PDF */
+        .job-responsibilities li::marker {
+            color: var(--blue);
+        }
 
-@media print {
-    @page {
-        size: A4;
-        margin: 10mm;
-    }
+        /* =========================================
+           EDUCATION
+        ========================================= */
 
-    body {
-        background: white;
-        padding: 0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+        .education-item {
+            margin-bottom: 18px;
+            padding: 14px 16px;
+            background: #f7f9fb;
+            border-left: 3px solid var(--blue);
+            border-radius: 3px;
+        }
 
-    .toolbar {
-        display: none !important;
-    }
+        .education-item h3 {
+            font-size: 14px;
+            color: var(--navy);
+            font-weight: 750;
+        }
 
-    .cv {
-        box-shadow: none;
-        border-radius: 0;
-        max-width: 100%;
-        grid-template-columns: 30% 70%;
-    }
+        .education-item .institution {
+            font-size: 12px;
+            color: var(--blue);
+            font-weight: 650;
+        }
 
-    .sidebar {
-        background: var(--navy) !important;
-        color: white !important;
-    }
+        .education-item .education-date {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 3px;
+        }
 
-    .section, .job, .education-item {
-        break-inside: avoid;
-    }
+        .education-item .education-detail {
+            font-size: 12px;
+            color: #526171;
+            margin-top: 5px;
+        }
 
-    a {
-        text-decoration: none;
-    }
-}
-</style>
+        /* =========================================
+           COMPETENCIES
+        ========================================= */
+
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 11px;
+        }
+
+        .competency-card {
+            background: #f5f8fb;
+            padding: 12px;
+            border-radius: 4px;
+            border-top: 2px solid var(--accent);
+        }
+
+        .competency-card h4 {
+            font-size: 12px;
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .competency-card p {
+            color: #5b6877;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        /* =========================================
+           REMOTE WORK
+        ========================================= */
+
+        .availability-box {
+            background: var(--light-blue);
+            border-left: 4px solid var(--blue);
+            padding: 17px;
+            border-radius: 4px;
+        }
+
+        .availability-box h3 {
+            color: var(--navy);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .availability-box p {
+            color: #465566;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        /* =========================================
+           PROFESSIONAL STRENGTHS
+        ========================================= */
+
+        .strength-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 15px;
+            list-style: none;
+        }
+
+        .strength-list li {
+            font-size: 12px;
+            color: #465566;
+            padding-left: 17px;
+            position: relative;
+        }
+
+        .strength-list li::before {
+            content: "✓";
+            color: var(--blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .cv-footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 10px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+        ========================================= */
+
+        @media screen and (max-width: 800px) {
+
+            body {
+                padding: 15px 8px;
+            }
+
+            .cv-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px 25px;
+            }
+
+            .main-content {
+                padding: 30px 24px;
+            }
+
+            .profile-header h1 {
+                font-size: 27px;
+            }
+
+            .competency-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .action-bar {
+                justify-content: center;
+            }
+
+            .action-button {
+                flex: 1;
+                padding: 10px;
+            }
+
+            .competency-grid,
+            .strength-list {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 25px 18px;
+            }
+
+            .sidebar {
+                padding: 27px 20px;
+            }
+
+            .section-heading {
+                font-size: 15px;
+            }
+        }
+
+        /* =========================================
+           A4 PRINT STYLING
+        ========================================= */
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html, body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .action-bar {
+                display: none !important;
+            }
+
+            .cv-wrapper {
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .cv-container {
+                display: grid !important;
+                grid-template-columns: 30% 70% !important;
+                width: 100% !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                overflow: visible !important;
+            }
+
+            .sidebar {
+                background: #102b4e !important;
+                color: white !important;
+                padding: 25px 18px !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .main-content {
+                padding: 27px 24px !important;
+            }
+
+            .profile-header h1 {
+                font-size: 24px;
+            }
+
+            .section {
+                margin-bottom: 24px;
+            }
+
+            .experience-item,
+            .education-item,
+            .competency-card,
+            .availability-box {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+
+            .cv-footer {
+                break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="toolbar">
-    <button onclick="window.print()">
-        Print / Save CV as PDF
-    </button>
-</div>
+<div class="cv-wrapper">
 
-<div class="cv">
+    <!-- PRINT BUTTON -->
 
-<!-- LEFT SIDEBAR -->
+    <div class="action-bar">
+        <button class="action-button" onclick="window.print()">
+            PRINT / SAVE AS PDF
+        </button>
+    </div>
 
-<aside class="sidebar">
+    <div class="cv-container">
 
-    <h1 class="name">Cyrus Kabiro Ndirangu</h1>
+        <!-- =====================================
+             LEFT SIDEBAR
+        ====================================== -->
 
-    <p class="tagline">
-        OPERATIONS, LOGISTICS & NEMT DISPATCH SPECIALIST
-    </p>
+        <aside class="sidebar">
 
-    <section class="sidebar-section">
-        <h2>Contact Details</h2>
+            <div class="profile-header">
 
-        <div class="contact-item">
-            <label>Location</label>
-            Nairobi, Kenya
-        </div>
+                <h1>
+                    Cyrus Kabiro Ndirangu
+                </h1>
 
-        <div class="contact-item">
-            <label>Phone</label>
-            <a href="tel:+254740257505">+254 740 257 505</a>
-        </div>
+                <p class="professional-title">
+                    Population Health Graduate |
+                    Healthcare Operations |
+                    Data & Administrative Support
+                </p>
 
-        <div class="contact-item">
-            <label>Email</label>
-            <a href="mailto:cyrusndirangu100@gmail.com">
-                cyrusndirangu100@gmail.com
-            </a>
-        </div>
-
-        <div class="contact-item">
-            <label>Postal Address</label>
-            P.O. Box 489, Othaya
-        </div>
-
-        <div class="contact-item">
-            <label>LinkedIn</label>
-            <a href="www.linkedin.com/in/cyrus-kabiro-ndirangu" target="_blank"
-               rel="noopener noreferrer">View Profile</a>
-        </div>
-
-        <div class="contact-item">
-            <label>Work Preference</label>
-            Open to Remote Opportunities
-        </div>
-    </section>
-
-    <section class="sidebar-section">
-        <h2>Core Expertise</h2>
-
-        <div class="skill-group">
-            <h3>Operations & Administration</h3>
-            <div class="tags">
-                <span>Data Entry</span>
-                <span>Data Annotation</span>
-                <span>Quality Control</span>
-                <span>Client Management</span>
-                <span>Records Management</span>
-                <span>Customer Support</span>
-                <span>Administrative Support</span>
-            </div>
-        </div>
-
-        <div class="skill-group">
-            <h3>NEMT & Logistics</h3>
-            <div class="tags">
-                <span>NEMT Dispatch</span>
-                <span>Trip Scheduling</span>
-                <span>Real-Time Dispatch</span>
-                <span>Route Optimization</span>
-                <span>Multi-Load Coordination</span>
-                <span>Will-Call Management</span>
-                <span>Driver Management</span>
-                <span>No-Show Documentation</span>
-            </div>
-        </div>
-
-        <div class="skill-group">
-            <h3>Marketing & Communication</h3>
-            <div class="tags">
-                <span>Social Media Marketing</span>
-                <span>Lead Generation</span>
-                <span>Client Communication</span>
-                <span>Digital Marketing</span>
-                <span>Front Desk Operations</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="sidebar-section">
-        <h2>Software & Technology</h2>
-
-        <div class="tags">
-            <span>RouteGenie</span>
-            <span>TripMaster</span>
-            <span>Bambi</span>
-            <span>Google Maps</span>
-            <span>GPS Tracking</span>
-            <span>Microsoft Excel</span>
-            <span>Google Sheets</span>
-        </div>
-    </section>
-
-    <section class="sidebar-section">
-        <h2>Compliance</h2>
-
-        <div class="tags">
-            <span>HIPAA Compliance</span>
-            <span>Medicaid Regulations</span>
-            <span>NEMT Broker Portals</span>
-            <span>Data Confidentiality</span>
-        </div>
-    </section>
-
-    <section class="sidebar-section">
-        <h2>Education</h2>
-
-        <div class="education-item">
-            <strong>BSc in Population Health</strong>
-            <small>Kenyatta University</small><br>
-            <small>2021 – 2024</small>
-        </div>
-
-        <div class="education-item">
-            <strong>KCSE – Grade B Plain</strong>
-            <small>Witima Secondary School</small><br>
-            <small>2019</small>
-        </div>
-    </section>
-
-</aside>
-
-<!-- RIGHT MAIN CONTENT -->
-
-<main class="main">
-
-    <section class="section">
-        <h2>Professional Summary</h2>
-
-        <p class="summary">
-            Detail-oriented and versatile Operations Professional
-            with experience across healthcare transportation
-            logistics, Non-Emergency Medical Transportation (NEMT)
-            dispatch, marketing coordination, administrative
-            operations and data management. Skilled in managing
-            high-volume operational workflows, coordinating
-            transportation schedules, optimizing routes, maintaining
-            accurate client databases and supporting business
-            communication. Proficient in specialized NEMT platforms
-            including RouteGenie, TripMaster and Bambi, with a strong
-            understanding of HIPAA compliance, Medicaid NEMT
-            regulations and data confidentiality. Experienced in
-            coordinating over 50 daily transportation trips across
-            ambulatory, wheelchair and stretcher service levels.
-            Highly organized, technology-oriented and prepared
-            for remote and on-site professional opportunities.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Professional Experience</h2>
-
-        <div class="job">
-
-            <div class="job-header">
-                <h3>Marketing & Operations Coordinator</h3>
-                <span class="date">Jan 2024 – Present</span>
             </div>
 
-            <p class="company">
-                Solid Gardens Limited — Kenya
-            </p>
+            <!-- CONTACT INFORMATION -->
 
-            <ul>
-                <li>
-                    Serve as the central administrative contact,
-                    coordinating front-desk interactions, client
-                    intake and corporate communication channels.
-                </li>
+            <section class="sidebar-section">
 
-                <li>
-                    Plan and manage social media marketing activities
-                    to strengthen online visibility and generate
-                    potential customer leads.
-                </li>
+                <h2 class="sidebar-heading">
+                    Contact Information
+                </h2>
 
-                <li>
-                    Maintain and update client databases, service
-                    records, payment status logs and customer
-                    information.
-                </li>
+                <div class="contact-item">
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">
+                        <a href="tel:+254740257505">
+                            +254-740-257-505
+                        </a>
+                    </span>
+                </div>
 
-                <li>
-                    Support daily business operations, customer
-                    communication and administrative coordination.
-                </li>
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">
+                        <a href="mailto:cyrusndirangu100@gmail.com">
+                            cyrusndirangu100@gmail.com
+                        </a>
+                    </span>
+                </div>
 
-                <li>
-                    Manage multiple operational responsibilities
-                    independently, ensuring organized workflows
-                    and accurate record keeping.
-                </li>
-            </ul>
-        </div>
+                <div class="contact-item">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">
+                        <a href="https://www.linkedin.com/in/cyrus-kabiro-ndiarangu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            linkedin.com/in/cyrus-kabiro-ndiarangu
+                        </a>
+                    </span>
+                </div>
 
-        <div class="job">
+                <div class="contact-item">
+                    <span class="contact-label">Postal Address</span>
+                    <span class="contact-value">
+                        P.O. Box 489, Othaya
+                    </span>
+                </div>
 
-            <div class="job-header">
-                <h3>NEMT Dispatch Specialist</h3>
-                <span class="date">Prior Experience</span>
-            </div>
+                <div class="contact-item">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">
+                        Kenya
+                    </span>
+                </div>
 
-            <p class="company">
-                Healthcare Transportation Operations
-            </p>
+            </section>
 
-            <ul>
-                <li>
-                    Coordinated over 50 daily non-emergency medical
-                    transportation trips across ambulatory,
-                    wheelchair and stretcher service levels.
-                </li>
+            <!-- CORE SKILLS -->
 
-                <li>
-                    Managed trip scheduling, real-time dispatching,
-                    driver assignments and daily transportation
-                    coordination.
-                </li>
+            <section class="sidebar-section">
 
-                <li>
-                    Optimized transportation routes to improve
-                    scheduling efficiency and reduce unnecessary
-                    travel time.
-                </li>
+                <h2 class="sidebar-heading">
+                    Core Competencies
+                </h2>
 
-                <li>
-                    Coordinated multi-load transportation schedules,
-                    same-day trip additions, cancellations and
-                    unexpected operational changes.
-                </li>
+                <div class="skill-group">
 
-                <li>
-                    Managed will-call requests, passenger no-show
-                    documentation and trip status updates.
-                </li>
+                    <h4>Public & Population Health</h4>
 
-                <li>
-                    Used RouteGenie, TripMaster, Bambi, GPS tracking
-                    and Google Maps to support dispatch operations.
-                </li>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Population Health</span>
+                        <span class="skill-tag">Health Promotion</span>
+                        <span class="skill-tag">Community Health</span>
+                        <span class="skill-tag">Disease Prevention</span>
+                        <span class="skill-tag">Health Education</span>
+                        <span class="skill-tag">Public Health Programs</span>
+                        <span class="skill-tag">Health Data</span>
+                    </div>
 
-                <li>
-                    Maintained confidentiality and accurate
-                    transportation records in accordance with
-                    HIPAA guidelines and applicable Medicaid
-                    NEMT requirements.
-                </li>
-            </ul>
-        </div>
+                </div>
 
-    </section>
+                <div class="skill-group">
 
-    <section class="section">
-        <h2>Technical Competencies</h2>
+                    <h4>Data & Administration</h4>
 
-        <div class="info-grid">
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Entry</span>
+                        <span class="skill-tag">Data Annotation</span>
+                        <span class="skill-tag">Data Accuracy</span>
+                        <span class="skill-tag">Records Management</span>
+                        <span class="skill-tag">Quality Control</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
 
-            <div class="info-card">
-                <strong>Transportation Systems</strong>
-                RouteGenie, TripMaster, Bambi,
-                GPS Tracking and Google Maps.
-            </div>
+                </div>
 
-            <div class="info-card">
-                <strong>Data & Analytics</strong>
-                Microsoft Excel, Google Sheets,
-                Data Entry, Data Annotation
-                and Quality Control.
-            </div>
+                <div class="skill-group">
 
-            <div class="info-card">
-                <strong>Healthcare Compliance</strong>
-                HIPAA Guidelines, Medicaid
-                NEMT Regulations and
-                Data Confidentiality.
-            </div>
+                    <h4>Healthcare Operations</h4>
 
-            <div class="info-card">
-                <strong>Business Operations</strong>
-                Administrative Support,
-                Customer Relations, Marketing,
-                Client Intake and Records Management.
-            </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NEMT Dispatch</span>
+                        <span class="skill-tag">Trip Scheduling</span>
+                        <span class="skill-tag">Route Optimization</span>
+                        <span class="skill-tag">Driver Coordination</span>
+                        <span class="skill-tag">Logistics</span>
+                        <span class="skill-tag">Operations Support</span>
+                    </div>
 
-        </div>
-    </section>
+                </div>
 
-    <section class="section">
-        <h2>Professional Strengths</h2>
+                <div class="skill-group">
 
-        <ul style="padding-left:20px; font-size:13px;">
-            <li>Strong organizational and time-management skills.</li>
-            <li>Attention to detail and data accuracy.</li>
-            <li>Effective written and verbal communication.</li>
-            <li>Ability to manage multiple operational tasks.</li>
-            <li>Problem-solving and adaptability.</li>
-            <li>Independent remote-work readiness.</li>
-            <li>Commitment to confidentiality and professionalism.</li>
-        </ul>
-    </section>
+                    <h4>Marketing & Business</h4>
 
-    <footer class="footer">
-        Cyrus Kabiro Ndirangu | Professional CV
-    </footer>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Digital Marketing</span>
+                        <span class="skill-tag">Lead Generation</span>
+                        <span class="skill-tag">Social Media</span>
+                        <span class="skill-tag">Client Engagement</span>
+                        <span class="skill-tag">Business Administration</span>
+                    </div>
 
-</main>
+                </div>
+
+            </section>
+
+            <!-- TECHNICAL SKILLS -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-heading">
+                    Technical Skills
+                </h2>
+
+                <ul class="sidebar-list">
+
+                    <li>Microsoft Excel</li>
+                    <li>Google Sheets</li>
+                    <li>Google Docs</li>
+                    <li>Google Drive</li>
+                    <li>Google Workspace</li>
+                    <li>RouteGenie</li>
+                    <li>TripMaster</li>
+                    <li>Bambi Dispatch Platform</li>
+                    <li>GPS Tracking Systems</li>
+                    <li>Google Maps</li>
+                    <li>Zoom & Google Meet</li>
+                    <li>WhatsApp Business</li>
+                    <li>Email & Calendar Management</li>
+                    <li>Digital File Management</li>
+
+                </ul>
+
+            </section>
+
+            <!-- PROFESSIONAL STRENGTHS -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-heading">
+                    Professional Strengths
+                </h2>
+
+                <ul class="sidebar-list">
+
+                    <li>Attention to Detail</li>
+                    <li>Analytical Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Time Management</li>
+                    <li>Multitasking</li>
+                    <li>Team Collaboration</li>
+                    <li>Adaptability</li>
+                    <li>Confidentiality</li>
+                    <li>Stakeholder Engagement</li>
+                    <li>Reliability</li>
+
+                </ul>
+
+            </section>
+
+        </aside>
+
+
+        <!-- =====================================
+             RIGHT MAIN CONTENT
+        ====================================== -->
+
+        <main class="main-content">
+
+            <!-- PROFESSIONAL PROFILE -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">▤</span>
+                    Professional Profile
+                </h2>
+
+                <p class="professional-summary">
+
+                    Versatile Population Health graduate from Kenyatta
+                    University with practical experience spanning healthcare
+                    administration, community health programs, healthcare
+                    transportation operations, NEMT dispatch, digital
+                    marketing and business coordination.
+
+                    Experienced in coordinating high-volume transportation
+                    operations involving more than 50 daily trips, managing
+                    schedules, supporting drivers, monitoring trip progress
+                    and maintaining accurate operational records. Familiar
+                    with ambulatory, wheelchair and stretcher transportation
+                    coordination, route optimization and dispatch management
+                    platforms.
+
+                    Also brings experience in public health service delivery,
+                    patient education, health data documentation, infection
+                    prevention and control, digital content management,
+                    client engagement and administrative support.
+
+                    Equipped with data entry, data annotation, spreadsheet
+                    management, internet research, digital records management
+                    and quality-control skills. Adaptable to remote and
+                    hybrid working environments, with the ability to manage
+                    competing priorities, maintain accuracy and communicate
+                    effectively with diverse stakeholders.
+
+                </p>
+
+            </section>
+
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">▣</span>
+                    Professional Experience
+                </h2>
+
+
+                <!-- SOLID GARDENS -->
+
+                <article class="experience-item">
+
+                    <div class="job-header">
+
+                        <h3 class="job-title">
+                            Marketing & Operations Coordinator
+                        </h3>
+
+                        <p class="company-name">
+                            Solid Gardens Limited
+                        </p>
+
+                        <p class="job-date">
+                            April 2024 – Present | Kenya
+                        </p>
+
+                    </div>
+
+                    <p class="job-description">
+
+                        Supporting property marketing, customer engagement
+                        and business operations for a real estate company
+                        dealing in residential and commercial land investment
+                        opportunities within the Nairobi Metropolitan Area
+                        and surrounding regions.
+
+                    </p>
+
+                    <ul class="job-responsibilities">
+
+                        <li>
+                            Coordinate digital marketing activities and
+                            social media campaigns across Facebook,
+                            Instagram and other digital platforms.
+                        </li>
+
+                        <li>
+                            Develop and manage educational and promotional
+                            content relating to land investment, property
+                            ownership, due diligence and real estate
+                            opportunities.
+                        </li>
+
+                        <li>
+                            Support lead generation through digital
+                            communication, customer enquiries and
+                            promotional campaigns.
+                        </li>
+
+                        <li>
+                            Maintain and organize client information,
+                            enquiry records and customer databases to
+                            support follow-ups and business activities.
+                        </li>
+
+                        <li>
+                            Respond to customer enquiries and communicate
+                            accurate information about plot sizes,
+                            documentation, boundaries, infrastructure,
+                            payment plans and site visits.
+                        </li>
+
+                        <li>
+                            Coordinate client engagement activities,
+                            including property viewing arrangements
+                            and physical site visits.
+                        </li>
+
+                        <li>
+                            Provide administrative support, assist with
+                            daily business operations and facilitate
+                            communication between prospective buyers
+                            and relevant stakeholders.
+                        </li>
+
+                        <li>
+                            Develop customer-focused communication
+                            strategies that promote informed property
+                            investment decisions and strengthen client
+                            relationships.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- NEMT DISPATCH -->
+
+                <article class="experience-item">
+
+                    <div class="job-header">
+
+                        <h3 class="job-title">
+                            NEMT Dispatch Specialist
+                        </h3>
+
+                        <p class="company-name">
+                            Healthcare Transportation Operations
+                        </p>
+
+                    </div>
+
+                    <p class="job-description">
+
+                        Supported non-emergency medical transportation
+                        operations through trip scheduling, dispatch
+                        coordination, route management and communication
+                        with drivers and other operational stakeholders.
+                        Coordinated more than 50 daily transportation trips
+                        involving different passenger mobility requirements.
+
+                    </p>
+
+                    <ul class="job-responsibilities">
+
+                        <li>
+                            Coordinate and monitor more than 50 daily
+                            non-emergency medical transportation trips,
+                            ensuring efficient scheduling and dispatch
+                            operations.
+                        </li>
+
+                        <li>
+                            Schedule and coordinate ambulatory,
+                            wheelchair-accessible and stretcher
+                            transportation services according to
+                            passenger transportation requirements.
+                        </li>
+
+                        <li>
+                            Manage trip assignments, dispatch schedules
+                            and real-time operational updates to support
+                            timely passenger transportation.
+                        </li>
+
+                        <li>
+                            Coordinate drivers and communicate relevant
+                            trip information, pickup arrangements,
+                            destinations and schedule changes.
+                        </li>
+
+                        <li>
+                            Monitor trip progress using GPS tracking
+                            systems and digital mapping tools to support
+                            operational visibility.
+                        </li>
+
+                        <li>
+                            Support route planning and optimization using
+                            Google Maps and transportation management
+                            platforms.
+                        </li>
+
+                        <li>
+                            Manage will-call trips and coordinate
+                            transportation arrangements when passengers
+                            are ready for pickup.
+                        </li>
+
+                        <li>
+                            Document no-shows, trip cancellations and
+                            other transportation exceptions to maintain
+                            accurate operational records.
+                        </li>
+
+                        <li>
+                            Monitor scheduling conflicts, pickup delays
+                            and transportation changes while supporting
+                            efficient dispatch decisions.
+                        </li>
+
+                        <li>
+                            Maintain accurate trip information and
+                            operational documentation to support
+                            accountability and service coordination.
+                        </li>
+
+                        <li>
+                            Utilize transportation management systems
+                            including RouteGenie, TripMaster and Bambi
+                            for dispatch and trip coordination activities.
+                        </li>
+
+                        <li>
+                            Use GPS tracking and Google Maps to assist
+                            with driver navigation, location monitoring
+                            and route management.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- COUNTY PUBLIC HEALTH -->
+
+                <article class="experience-item">
+
+                    <div class="job-header">
+
+                        <h3 class="job-title">
+                            Health Attachment Student
+                        </h3>
+
+                        <p class="company-name">
+                            County Public Health Offices, Nyeri
+                        </p>
+
+                        <p class="job-date">
+                            May 2023 – August 2023
+                        </p>
+
+                    </div>
+
+                    <p class="job-description">
+
+                        Participated in community and preventive public
+                        health activities, supporting health promotion,
+                        field operations, health information management
+                        and coordination of public health programs.
+
+                    </p>
+
+                    <ul class="job-responsibilities">
+
+                        <li>
+                            Supported school health programs and
+                            community-based public health initiatives
+                            aimed at improving health awareness
+                            and disease prevention.
+                        </li>
+
+                        <li>
+                            Participated in the distribution of
+                            nutritional supplements and deworming
+                            interventions in school health programs.
+                        </li>
+
+                        <li>
+                            Assisted in recording, organizing and
+                            maintaining health-related information
+                            and program data.
+                        </li>
+
+                        <li>
+                            Supported inspection activities and
+                            maintained relevant public health
+                            inspection logs and records.
+                        </li>
+
+                        <li>
+                            Participated in food safety inspections,
+                            environmental health activities and
+                            waste management monitoring.
+                        </li>
+
+                        <li>
+                            Supported maternal health service
+                            activities and community health
+                            interventions.
+                        </li>
+
+                        <li>
+                            Assisted in tetanus vaccination
+                            program activities and related
+                            public health support initiatives.
+                        </li>
+
+                        <li>
+                            Worked with public health personnel
+                            and other stakeholders in coordinating
+                            field activities and health programs.
+                        </li>
+
+                        <li>
+                            Supported health promotion and
+                            preventive health education within
+                            community settings.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- BEACON OF HOPE -->
+
+                <article class="experience-item">
+
+                    <div class="job-header">
+
+                        <h3 class="job-title">
+                            Health Attachment Student
+                        </h3>
+
+                        <p class="company-name">
+                            Beacon of Hope Hospital, Rongai, Kajiado
+                        </p>
+
+                        <p class="job-date">
+                            May 2022 – August 2022
+                        </p>
+
+                    </div>
+
+                    <p class="job-description">
+
+                        Participated in clinical support, patient
+                        education and community health activities,
+                        gaining practical exposure to healthcare
+                        service delivery, patient follow-up and
+                        infection prevention practices.
+
+                    </p>
+
+                    <ul class="job-responsibilities">
+
+                        <li>
+                            Supported patient education activities
+                            focusing on disease prevention, health
+                            promotion and healthy lifestyle practices.
+                        </li>
+
+                        <li>
+                            Participated in nutrition counselling
+                            and supported documentation of patient
+                            dietary progress.
+                        </li>
+
+                        <li>
+                            Assisted with basic patient triage
+                            activities, including recording
+                            temperature, blood pressure, weight
+                            and height.
+                        </li>
+
+                        <li>
+                            Supported children's nutritional
+                            assessment activities, including
+                            Mid-Upper Arm Circumference (MUAC)
+                            measurements.
+                        </li>
+
+                        <li>
+                            Participated in Infection Prevention
+                            and Control activities to support
+                            safe healthcare practices.
+                        </li>
+
+                        <li>
+                            Assisted with compliance checklists,
+                            healthcare documentation and
+                            reporting activities.
+                        </li>
+
+                        <li>
+                            Participated in community outreach
+                            and health education initiatives,
+                            including activities supporting
+                            people affected by HIV.
+                        </li>
+
+                        <li>
+                            Supported patient follow-up and
+                            health communication initiatives
+                            within community-based programs.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </section>
+
+
+            <!-- EDUCATION -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">▤</span>
+                    Education
+                </h2>
+
+                <div class="education-item">
+
+                    <h3>
+                        Bachelor of Science in Population Health
+                    </h3>
+
+                    <p class="institution">
+                        Kenyatta University
+                    </p>
+
+                    <p class="education-date">
+                        2021 – 2024
+                    </p>
+
+                    <p class="education-detail">
+                        Second Class Honours – Upper Division.
+                        Cumulative Mean: 61.62%.
+                    </p>
+
+                </div>
+
+                <div class="education-item">
+
+                    <h3>
+                        Kenya Certificate of Secondary Education (KCSE)
+                    </h3>
+
+                    <p class="institution">
+                        Witima Secondary School
+                    </p>
+
+                    <p class="education-date">
+                        2019
+                    </p>
+
+                    <p class="education-detail">
+                        Overall Grade: B Plain.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- DATA ENTRY AND REMOTE WORK -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">▦</span>
+                    Data Entry & Remote Work Competencies
+                </h2>
+
+                <div class="competency-grid">
+
+                    <div class="competency-card">
+
+                        <h4>Data Entry & Annotation</h4>
+
+                        <p>
+                            Data entry, data annotation, data
+                            categorization, information processing,
+                            digital record updates and data validation.
+                        </p>
+
+                    </div>
+
+                    <div class="competency-card">
+
+                        <h4>Spreadsheet Management</h4>
+
+                        <p>
+                            Microsoft Excel, Google Sheets,
+                            spreadsheet organization, data sorting,
+                            data recording and information tracking.
+                        </p>
+
+                    </div>
+
+                    <div class="competency-card">
+
+                        <h4>Digital Documentation</h4>
+
+                        <p>
+                            Google Docs, Google Drive, Google Workspace,
+                            document formatting, digital file
+                            organization and records management.
+                        </p>
+
+                    </div>
+
+                    <div class="competency-card">
+
+                        <h4>Research & Reporting</h4>
+
+                        <p>
+                            Internet research, information gathering,
+                            report writing, data verification,
+                            documentation and quality control.
+                        </p>
+
+                    </div>
+
+                    <div class="competency-card">
+
+                        <h4>Communication & Collaboration</h4>
+
+                        <p>
+                            Email communication, Zoom, Google Meet,
+                            WhatsApp Business, online collaboration
+                            and stakeholder engagement.
+                        </p>
+
+                    </div>
+
+                    <div class="competency-card">
+
+                        <h4>Administrative Support</h4>
+
+                        <p>
+                            Email and calendar management, scheduling,
+                            task coordination, digital filing and
+                            administrative documentation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- HEALTHCARE ADMINISTRATION -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">✚</span>
+                    Healthcare & Public Health Competencies
+                </h2>
+
+                <ul class="strength-list">
+
+                    <li>Community Health Promotion</li>
+
+                    <li>Patient Education</li>
+
+                    <li>Health Information Recording</li>
+
+                    <li>Patient Follow-up Support</li>
+
+                    <li>Public Health Program Support</li>
+
+                    <li>Nutrition Assessment Support</li>
+
+                    <li>Infection Prevention & Control</li>
+
+                    <li>Environmental Health</li>
+
+                    <li>Health Inspection Documentation</li>
+
+                    <li>Stakeholder Coordination</li>
+
+                    <li>Health Research & Reporting</li>
+
+                    <li>Healthcare Administration</li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- OPERATIONS AND LOGISTICS -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">▣</span>
+                    Operations & Logistics Competencies
+                </h2>
+
+                <ul class="strength-list">
+
+                    <li>Trip Scheduling & Dispatch</li>
+
+                    <li>Route Planning & Optimization</li>
+
+                    <li>Real-Time Trip Monitoring</li>
+
+                    <li>Driver Coordination</li>
+
+                    <li>Will-Call Management</li>
+
+                    <li>Transportation Documentation</li>
+
+                    <li>Operational Reporting</li>
+
+                    <li>Database Management</li>
+
+                    <li>Customer Communication</li>
+
+                    <li>Administrative Coordination</li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- PROFESSIONAL STRENGTHS -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">★</span>
+                    Professional Strengths
+                </h2>
+
+                <ul class="strength-list">
+
+                    <li>Strong Written & Verbal Communication</li>
+
+                    <li>Attention to Detail & Accuracy</li>
+
+                    <li>Critical & Analytical Thinking</li>
+
+                    <li>Problem Solving & Decision Making</li>
+
+                    <li>Organizational Skills</li>
+
+                    <li>Effective Time Management</li>
+
+                    <li>Ability to Work Independently</li>
+
+                    <li>Teamwork & Collaboration</li>
+
+                    <li>Adaptability to New Technologies</li>
+
+                    <li>Confidentiality & Data Handling</li>
+
+                    <li>Customer Service Orientation</li>
+
+                    <li>Multitasking & Prioritization</li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- REMOTE WORK AVAILABILITY -->
+
+            <section class="section">
+
+                <h2 class="section-heading">
+                    <span class="section-icon">⌘</span>
+                    Remote Work Availability
+                </h2>
+
+                <div class="availability-box">
+
+                    <h3>
+                        Available for Remote & Hybrid Opportunities
+                    </h3>
+
+                    <p>
+
+                        Based in Kenya and open to remote,
+                        hybrid and flexible work opportunities
+                        across different industries and geographical
+                        locations.
+
+                        Equipped with reliable internet access
+                        and the ability to work with digital
+                        collaboration tools, manage independent
+                        assignments and maintain consistent
+                        communication with distributed teams.
+
+                        Flexible and willing to work across
+                        different time zones, subject to agreed
+                        working schedules and operational
+                        requirements.
+
+                        Interested in opportunities involving
+                        data entry, data annotation, healthcare
+                        administration, NEMT dispatch, operations
+                        coordination, logistics, records management,
+                        quality control and administrative support.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="cv-footer">
+
+                Cyrus Kabiro Ndirangu | Professional Curriculum Vitae
+
+                <br>
+
+                Population Health • Healthcare Operations •
+                Data Management • Administration
+
+            </footer>
+
+        </main>
+
+    </div>
 
 </div>
 
